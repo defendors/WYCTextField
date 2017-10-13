@@ -129,12 +129,12 @@
 }
 - (NSString*)text{
 	if (_isAllowAutoInsertSpace) {
-		if (_textAutoInsertSpaceMode == autoInsertSpaceMode_cellphone
+		if (_textAutoInsertSpaceMode == autoInsertSpaceModeCellphone
 			||
-			_textAutoInsertSpaceMode == autoInsertSpaceMode_backcardNumber) {
+			_textAutoInsertSpaceMode == autoInsertSpaceModeBackcardNumber) {
 			return [[super text] stringByReplacingOccurrencesOfString:@" " withString:@""];
 		}
-		if (_textAutoInsertSpaceMode == autoInsertSpaceMode_other
+		if (_textAutoInsertSpaceMode == autoInsertSpaceModeOther
 			&&
 			_spaceIndexes.count != 0) {
 			return [[super text] stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -165,7 +165,7 @@
 		return;
 	}
 	switch (_textAutoInsertSpaceMode) {
-		case autoInsertSpaceMode_cellphone:
+		case autoInsertSpaceModeCellphone:
 		{
 			NSInteger firstSpace = 3;
 			NSInteger secondSpace = 8;
@@ -188,7 +188,7 @@
 		}
 			break;
 			
-		case autoInsertSpaceMode_backcardNumber:
+		case autoInsertSpaceModeBackcardNumber:
 		{
 			NSString*tempString=[textField.text stringByReplacingOccurrencesOfString:@" " withString:@""];//首先获取到无空格的字符串
 			if (tempString.length > _maxLength) {
@@ -216,7 +216,7 @@
 		}
 			break;
 			
-		case autoInsertSpaceMode_other:
+		case autoInsertSpaceModeOther:
 		{
 			NSInteger otherMode_maxSpaceCount = _spaceIndexes.count;
 			if (otherMode_maxSpaceCount < 1

@@ -7,9 +7,9 @@
 
 #import <UIKit/UIKit.h>
 typedef NS_ENUM(NSInteger,autoInsertSpaceMode){
-	autoInsertSpaceMode_cellphone,//国内手机号的分隔方式(从后向前，每4位插入分隔空格符)
-	autoInsertSpaceMode_backcardNumber,//银行卡号分隔(从前往后每四位插入分隔空格)
-	autoInsertSpaceMode_other
+	autoInsertSpaceModeCellphone,//国内手机号的分隔方式(从后向前，每4位插入分隔空格符)
+	autoInsertSpaceModeBackcardNumber,//银行卡号分隔(从前往后每四位插入分隔空格)
+	autoInsertSpaceModeOther
 };
 @interface WYCTextField : UITextField
 /*

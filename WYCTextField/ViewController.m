@@ -35,14 +35,14 @@
 	firstTextField = [[WYCTextField alloc]initWithFrame:CGRectMake(40, 100, 250, 45)];
 	firstTextField.isAllowAutoInsertSpace = YES;
 	firstTextField.placeholder = @"手机号模式";
-	firstTextField.textAutoInsertSpaceMode = autoInsertSpaceMode_cellphone;
+	firstTextField.textAutoInsertSpaceMode = autoInsertSpaceModeCellphone;
 	firstTextField.backgroundColor = [UIColor yellowColor];
 	[self.view addSubview:firstTextField];
 	
 	secondTextField = [[WYCTextField alloc]initWithFrame:CGRectMake(40, 100 + 45 + 10, 250, 45)];
 	secondTextField.isAllowAutoInsertSpace = YES;
 	secondTextField.placeholder = @"银行卡模式";
-	secondTextField.textAutoInsertSpaceMode = autoInsertSpaceMode_backcardNumber;
+	secondTextField.textAutoInsertSpaceMode = autoInsertSpaceModeBackcardNumber;
 	secondTextField.backgroundColor = [UIColor yellowColor];
 	[self.view addSubview:secondTextField];
 	
@@ -51,7 +51,7 @@
 	thirdTextField.font = [UIFont systemFontOfSize:12];
 	thirdTextField.placeholder = @"其他模式(例如:第二，第四位为空格)";
 	thirdTextField.spaceIndexes = [NSSet setWithArray:@[@2,@4]];
-	thirdTextField.textAutoInsertSpaceMode = autoInsertSpaceMode_other;
+	thirdTextField.textAutoInsertSpaceMode = autoInsertSpaceModeOther;
 	thirdTextField.backgroundColor = [UIColor yellowColor];
 	[self.view addSubview:thirdTextField];
 }
