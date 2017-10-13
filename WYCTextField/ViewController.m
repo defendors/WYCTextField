@@ -27,7 +27,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChangeNotification:) name:UITextFieldTextDidChangeNotification object:nil];
 }
 - (void)viewWillDisappear:(BOOL)animated{
-	
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 #pragma mark private method
